@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Blaka&family=Inspiration&family=Tiro+Devanagari+Hindi&display=swap');
+
+.input-wrapper{
+    display:flex;
+    margin-top: 1.4em;
+    position: relative;
+    width:80%;
+    align-items: center;
+}
+
+.input-element{
+    width: 100%;
+    font-weight: 300;
+    font-size: 1.2em;
+    padding: 1.4em 3em;
+    border-radius: 26px;
+    border: none;
+    box-shadow: inset 3px 3px 5px black;
+    font-family: 'Tiro Devanagari Hindi', serif;
+    text-transform:capitalize ;
+    color: black;
+}
+
+.input-element:focus{
+    outline: none;
+    box-shadow: 0 0 2px 1000px rgba(82, 49, 49, 0.6);
+}
+
+.input-button{
+    position:absolute;
+    right: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 30%;
+    box-shadow: 1px 1px 10px black;
+    background-color: mistyrose;
+    color: darkred;
+    font-weight: 900;
+    transition-duration: 0.2s;
+    border: none;
+}
+
+.input-button:active{
+    background-color: rgb(235, 194, 190);
+    box-shadow: 0px 0px 15px black;
+    font-size: 0.8rem;
+    transform: scale(0.9);
+}
