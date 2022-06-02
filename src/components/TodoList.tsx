@@ -28,9 +28,9 @@ const TodoList: React.FC = () => {
                     
                                 initial={{ x: 1500 }}
                                 animate={{ x: 0 }}
-                                transition={{ delay: 0.2 }}
+                                transition={{ delay: 0.1 }}
                             >
-                                <SingleTodo todo={todo}   />
+                                <SingleTodo todo={todo} index={index}   />
                             </motion.li></div>)}
                 
                     </Draggable>

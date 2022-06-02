@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Todo } from "./../model";
 import "./../css/Single.css";
 import {
@@ -7,17 +7,25 @@ import {
   RiCheckboxCircleFill
 } from "react-icons/ri";
 import { removeTodo, doneTodo } from "../redux/slice";
+import { HiThumbUp } from 'react-icons/hi';
 import { useAppDispatch } from "../hooks";
 
 interface SingleProps {
-    todo: Todo;
+  todo: Todo;
+  index: number;
     
 }
 
-const SingleTodo: React.FC<SingleProps> = ({ todo,  }) => {
+const SingleTodo: React.FC<SingleProps> = ({ todo, index  }) => {
     const [edit, setEdit] = useState<boolean>(false);
     const [editText, setEditText] = useState<string>(todo.text);
+
+  const inputRef = useRef<HTMLInputElement>(null);
   const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, [edit]);
 
     const handleEdit = (todo: Todo) => {
         if (!todo.isDone && !edit) {
@@ -27,14 +35,19 @@ const SingleTodo: React.FC<SingleProps> = ({ todo,  }) => {
   };
   return (
     <div>
-          <div className="paper">
+      <div className="paper">
+        <span className="number">{index + 1 + '.'}</span>
               {
-                  edit ? (<div><input type="text" value={editText} onChange={(e) => {
+          edit ? (<div className="input_area">
+            <input ref={inputRef} className="input_edit" type="text" value={editText} onChange={(e) => {
                       setEditText(e.target.value);
                       
-                  }} /><button onClick={() => { setEdit(false) }}
-                  >X</button></div>)
-                      : (todo.isDone ? <s>{editText}</s> : <span>{editText}</span>)
+            }} />
+            <button className="input_thumb" onClick={() => { setEdit(false) }}
+            ><HiThumbUp /></button>
+          </div>)
+            : (todo.isDone ? <div className="text isdone">{editText}</div>
+              : <div className="text" >{editText}</div>)
               }
         
         <span className="icons-wrapper">

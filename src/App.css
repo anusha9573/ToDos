@@ -2,14 +2,11 @@
 
 .App {
   display: flex;
+  /* background-size: 100%; */
   flex-direction: column;
   margin:0;
   padding: 0;
   width: 100vw;
-  height: 180vh;
-  background-color: rgba(116, 70, 70, 0.5);
- 
-  
   text-align: center;
   align-items: center;
   color: black;
@@ -25,7 +22,14 @@
 }
 
 .header:hover{
- 
   color: white;
   text-shadow: 6px 5px 1px darkred;
+}
+
+@media (max-width: 700px){
+  .header{
+    font-size: 2rem;
+  }
+
+
 }

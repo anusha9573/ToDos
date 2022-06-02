@@ -1,4 +1,7 @@
 body {
+  scrollbar-width: thin;
+  margin: 0;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,10 +9,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("https://img.freepik.com/free-vector/3d-clipboard-rating-five-stars-best-excellent-rating-5-star-quality-customer-rating-feedback-concept-clipboard-task-todo-check-list-product-review-icon-3d-vector-render-illustration_412828-1048.jpg?w=740");
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity:0.7;
+  background: url("https://img.freepik.com/free-photo/flat-lay-notebook-with-list-desk_23-2148938724.jpg?t=st=1654159168~exp=1654159768~hmac=ccd6ee4f4794785cf359859936effc35882a05304c10a4f8360b55e0030e8763&w=740");
+  background-attachment: fixed;
+  background-size: 100%;
+  opacity:0.9;
 }
 
 code {

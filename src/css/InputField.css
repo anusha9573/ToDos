@@ -19,11 +19,12 @@
     font-family: 'Tiro Devanagari Hindi', serif;
     text-transform:capitalize ;
     color: black;
+    background-color: lightgray;
 }
 
 .input-element:focus{
     outline: none;
-    box-shadow: 0 0 2px 1000px rgba(82, 49, 49, 0.6);
+    box-shadow: 0 0 2px 10000px rgba(0, 0, 0, 0.7);
 }
 
 .input-button{

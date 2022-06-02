@@ -1,7 +1,8 @@
 import React from 'react'
 import './../css/InputField.css'
 import { useAppDispatch } from '../hooks'
-import { addTodo } from './../../src/redux/slice'; 
+import { addTodo } from './../../src/redux/slice';
+import { motion } from 'framer-motion';
 
 interface InputStateProps {
   text: string;
@@ -20,10 +21,17 @@ export const InputField: React.FC<InputStateProps>  = ({text, setText}) => {
   }
   
   return (
-      <div className="input-wrapper">
+    <motion.div
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      transition={{
+        delay: 0.8,
+        duration: 0.5
+      }}
+      className="input-wrapper">
       <input value={text} onChange={(e) => setText(e.target.value)} type="text" className="input-element" placeholder="Enter your task" />
       <button onClick={() => handleAdd(text) } className="input-button"> Add</button>
-    </div>
+    </motion.div>
   )
 }
 

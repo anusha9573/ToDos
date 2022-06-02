@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Blaka&family=Gochi+Hand&family=Inspiration&family=Tiro+Devanagari+Hindi&display=swap');
+
 .paper{
-    
     position: relative;
     width: 800px;
     height: 100px;
@@ -10,11 +11,20 @@
     box-shadow: 2px 2px 5px black;
     transition-duration: 0.2s;
     border-radius: 20px;
+    font-family: 'Gochi Hand', cursive;
+}
+
+.number{
+    position:absolute;
+    left: 10px;
+    top: 30px;
+
 }
 
 .paper:hover{
     transform:scale(1.05);
     opacity: 1;
+    z-index: 100;
 }
 
 .icons-wrapper{
@@ -42,8 +52,57 @@
 .done{
     background-color: lightseagreen;
 }
+.isdone{
+    text-decoration: line-through;
+}
 
 .edit{
     background-color: yellow;
     
+}
+.input_area{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+
+.input_edit{
+    width: 60%;
+    /* word-wrap: break-word; */
+    overflow: hidden;
+    border: none;
+    background-color: gray;
+    color: white;
+    font-size: 25px;
+    border-radius: 5px;
+    /* text-overflow: clip; */
+}
+
+.text{
+    padding: 10px;
+    margin-left: 50px;
+    border: none;
+    font-size: 30px;
+    outline: none;
+    text-align: center;
+    overflow: hidden;
+    width: 600px;
+    height: 60px;
+}
+
+.input_thumb{
+    background-color: white;
+    margin-left: 2px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 25px;
+    text-align: center;
+    color: black;
+}
+
+.input_thumb:hover{
+    background-color: black;
+    color: white;
 }
