@@ -13,7 +13,6 @@ import { useAppDispatch } from "../hooks";
 interface SingleProps {
   todo: Todo;
   index: number;
-    
 }
 
 const SingleTodo: React.FC<SingleProps> = ({ todo, index  }) => {
