@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/anusha9573/ToDos/static/css/main.0f3cba8e.css",
+    "main.js": "/anusha9573/ToDos/static/js/main.13f06783.js",
+    "index.html": "/anusha9573/ToDos/index.html",
+    "main.0f3cba8e.css.map": "/anusha9573/ToDos/static/css/main.0f3cba8e.css.map",
+    "main.13f06783.js.map": "/anusha9573/ToDos/static/js/main.13f06783.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f3cba8e.css",
+    "static/js/main.13f06783.js"
+  ]
+}
