@@ -4,7 +4,7 @@
     position: relative;
     width: 800px;
     height: 100px;
-    background-image: url("https://img.freepik.com/free-photo/view-white-crumpled-paper_1194-7544.jpg?t=st=1653985038~exp=1653985638~hmac=6fdc9806c9d76d36df8b69f11a44fff86575c0db9615806829bcdfd3edfb1028&w=740");
+    background-image: "../bg.jpg";
     opacity: 0.8;
     margin: 5px;
     font-size: 30px;
